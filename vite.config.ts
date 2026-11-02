@@ -4,9 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  // No custom domain yet: served at norin-web.github.io/tclapp/.
-  // When a domain is attached, switch to "/" AND add public/CNAME in the same commit.
-  base: "/tclapp/",
+  // Custom domain tclremote.online (public/CNAME) → served from the root.
+  // If the domain is ever removed, switch back to "/tclapp/" or every asset 404s.
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
 });
