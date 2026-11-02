@@ -311,7 +311,7 @@ ul, ol { list-style: none; }
 .design__img { align-self: flex-end; width: min(326px, 84vw); border-radius: 32px 0 0 32px; margin-top: 16px; }
 @media (min-width: 900px) {
   /* text sits on the same line as other sections; the render bleeds to the window edge */
-  .design { flex-direction: row; align-items: center; justify-content: space-between; height: 640px; padding: 0 0 0 calc((100% - min(var(--page), 100% - 2 * var(--gutter))) / 2 + 96px); }
+  .design { flex-direction: row; align-items: center; justify-content: space-between; height: 640px; margin-top: 120px; padding: 0 0 0 calc((100% - min(var(--page), 100% - 2 * var(--gutter))) / 2 + 96px); }
   .design__img { width: 348px; height: 640px; object-fit: cover; margin: 0; border-radius: 36px 0 0 36px; }
 }
 .principles { display: grid; gap: 28px; margin-top: 28px; }
