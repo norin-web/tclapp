@@ -415,16 +415,21 @@ ul, ol { list-style: none; }
 .ask a { text-decoration: underline; text-underline-offset: 3px; }
 .ask .ask__link { text-decoration: none; font-weight: 600; }
 @media (min-width: 900px) {
-  .legal { flex-direction: row; gap: 96px; padding: 96px 96px 140px; }
+  .legal { flex-direction: row; gap: clamp(40px, 6vw, 96px); padding: 96px clamp(0px, 6vw, 96px) 140px; }
   .toc { width: 120px; flex-shrink: 0; }
   .toc ol { position: sticky; top: 112px; flex-direction: column; gap: 6px; }
   .toc button { height: 32px; gap: 12px; }
   .toc i { width: 20px; }
   .toc button.is-on i { width: 40px; }
   .legal__body { gap: 56px; }
-  .glance__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .legal__body { min-width: 0; }
   .lsec p, .lsec li, .legal__intro { font-size: 17px; }
   .ask { flex-direction: row; align-items: center; justify-content: space-between; padding: 32px; }
+}
+
+@media (min-width: 1200px) {
+  .legal { gap: 96px; padding-inline: 96px; }
+  .glance__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }
 
 /* 404 */
