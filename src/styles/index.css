@@ -223,14 +223,16 @@ ul, ol { list-style: none; }
 /* ── footer ───────────────────────────────────────────────── */
 .footer__bar { border-top: 1px solid var(--line); padding-block: 32px; }
 .footer__top { display: flex; flex-direction: column; gap: 32px; }
-.footer__brand { display: grid; gap: 8px; justify-items: start; max-width: 380px; }
+.footer__brand { display: grid; gap: 8px; justify-items: start; align-content: start; max-width: 380px; }
 .footer__brand b { font-size: 18px; font-weight: 600; }
 .footer__brand p, .footer__brand a { font-size: 15px; }
 .footer__cols { display: flex; gap: 32px; }
 .footer__cols > div { width: 163px; display: grid; gap: 8px; align-content: start; font-size: 15px; }
 .footer__cols ul { display: grid; gap: 8px; }
 .footer__cols a:hover, .footer__brand a:hover { color: var(--text-2); }
-.footer__copy { display: flex; justify-content: space-between; gap: 16px; margin-top: 32px; font-size: 15px; color: var(--muted); }
+.footer__note { margin-top: 32px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.footer__copy { display: flex; justify-content: space-between; gap: 16px; margin-top: 16px; font-size: 15px; color: var(--muted); }
+.footer__copy button { white-space: nowrap; align-self: flex-start; }
 .footer__copy button:hover { color: #fff; }
 @media (min-width: 900px) {
   .footer__bar { padding-block: 56px 40px; }
@@ -238,7 +240,8 @@ ul, ol { list-style: none; }
   .footer__cols { gap: 96px; }
   .footer__cols > div { width: 120px; gap: 12px; }
   .footer__cols ul { gap: 12px; }
-  .footer__copy { margin-top: 56px; }
+  .footer__note { margin-top: 56px; }
+  .footer__copy { margin-top: 24px; }
 }
 
 /* ── app page ─────────────────────────────────────────────── */
@@ -395,7 +398,7 @@ ul, ol { list-style: none; }
 .toc button.is-on i { width: 24px; background: var(--accent); }
 .legal__body { display: grid; gap: 40px; max-width: 800px; }
 .glance__grid { display: grid; gap: 10px; }
-.glance__card { display: grid; gap: 6px; padding: 20px; border-radius: 20px; background: var(--surface); }
+.glance__card { display: grid; gap: 6px; align-content: start; padding: 20px; border-radius: 20px; background: var(--surface); }
 .glance__card b { font-size: 17px; }
 .glance__card span { font-size: 15px; color: var(--text-2); }
 .legal__intro, .lsec p, .lsec li { color: var(--text-2); font-size: 16px; line-height: 1.65; }

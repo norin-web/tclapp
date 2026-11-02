@@ -1,30 +1,26 @@
 // Every brand / app fact lives here so names, IDs and emails are never duplicated.
-// PLACEHOLDER values are marked — replace them when the owner sends real data
-// (App Store ID → run the iTunes lookup and refresh `app` and `specs`).
+// App data from https://itunes.apple.com/lookup?id=6746798716 (2026-11-02).
+// Operator, email and trademark wording follow the owner's Privacy Policy and Terms.
 
 export const site = {
   brand: "TCL Remote",
-  // PLACEHOLDER: owner email
-  email: "support@example.com",
+  email: "lozic@delsisters.store",
   year: new Date().getFullYear(),
-  // PLACEHOLDER: operator (legal entity) — the brand is shown until it arrives
-  operator: "TCL Remote",
-  // TCL name used with the client's permission; confirm wording against their documents
-  disclaimer: "TV remote for iPhone. TCL is a trademark of its respective owner.",
+  operator: "DEL sisters d.o.o.",
+  // wording follows section 8 of the owner's Terms of Use
+  disclaimer: "TV remote for iPhone by DEL sisters d.o.o. TCL and related marks belong to their respective rights holders and are used under a trademark authorization agreement.",
 };
 
-// PLACEHOLDER: App Store ID
-const APP_ID = "0000000000";
+const APP_ID = "6746798716";
 
 export const app = {
   id: APP_ID,
-  url: `https://apps.apple.com/app/id${APP_ID}`,
-  // PLACEHOLDER: from https://itunes.apple.com/lookup?id=<ID> (empty = line hidden on the site)
-  minIOS: "",
+  url: `https://apps.apple.com/us/app/tcl-remote-control-home-tv/id${APP_ID}`,
+  minIOS: "18",
   category: "Utilities",
 };
 
-// " · iOS 17+" once minIOS is known, nothing until then
+// " · iOS 18+"; an empty minIOS hides the line
 export const iosNote = app.minIOS ? ` · iOS ${app.minIOS}+` : "";
 
 export const nav = [
@@ -64,15 +60,16 @@ export const appFeatures = [
   { tag: "AI Chat", title: "Help with your TV, in plain words.", text: "Start from a suggested question like “Why can't my phone find the TV?” or ask your own.", img: "/images/screen-chat.png" },
 ];
 
-// PLACEHOLDER rows (Developer, Languages, Size, Age rating): fill from the iTunes
-// lookup once the App Store ID arrives; rows left as "" are hidden on the site.
+// From the iTunes lookup; rows left as "" are hidden on the site.
+// The store's developer chip says "Remote Control Systems"; the seller and the
+// legal documents name DEL sisters d.o.o., so the site uses the latter.
 export const specs: [string, string][] = [
-  ["Developer", ""],
+  ["Developer", site.operator],
   ["Category", app.category],
   ["Compatibility", app.minIOS ? `iPhone and iPad, iOS ${app.minIOS} or later` : "iPhone and iPad"],
-  ["Languages", ""],
-  ["Size", ""],
-  ["Age rating", ""],
+  ["Languages", "English and 20 more"],
+  ["Size", "308.8 MB"],
+  ["Age rating", "4+"],
   ["Price", "Free · In‑app purchases"],
 ];
 

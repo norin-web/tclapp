@@ -51,8 +51,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <p className="container footer__note">{site.disclaimer}</p>
         <div className="container footer__copy">
-          <span>© {site.year} {site.operator}. All rights reserved.</span>
+          <span>© {site.year} {site.operator.replace(/\.$/, "")}. All rights reserved.</span>
           <button onClick={() => scrollTo({ top: 0, behavior: "smooth" })}>Back to top</button>
         </div>
       </div>
